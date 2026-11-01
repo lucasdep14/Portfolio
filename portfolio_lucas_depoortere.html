@@ -57,10 +57,10 @@
         const projectsData = {
             'vdm-productions': { // Unieke ID voor het project
                 title: "VDM Productions",
-                category: "Client Project / Showcase Website", // Categorie van het project
-                shortDesc: "Moderne, responsieve website voor een verhuurder van licht- en geluidsapparatuur.", // Korte beschrijving
+                category: "Client Project / Showcase Website", 
+                shortDesc: "Moderne, responsieve website voor een verhuurder van licht- en geluidsapparatuur.", 
                 fullDesc: "Voor VDM Productions is een strakke website ontwikkeld die volledig aansluit bij de professionele uitrusting van het verhuurbedrijf. Het doel was om bezoekers in één oogopslag een helder overzicht te geven van het aanbod in licht- en geluidstechniek, met een sterke focus op gebruikersgemak en snelle offerteaanvragen.",
-                features: [ // Belangrijkste functionaliteiten
+                features: [ 
                     "Volledig responsive design",
                     "Duidelijke categorisering van licht- en geluidsverhuur",
                     "Geoptimaliseerd voor snelle laadtijden en SEO",
@@ -68,6 +68,7 @@
                 ],
                 tech: ["HTML5", "CSS3"],
                 liveUrl: "https://lucasdep14.github.io/VDM-Productions/",
+                logo: "images/VDM_Logo.png",
                 images: ["images/VDM_Site.png"]
             },
             'medconnect': {
@@ -84,6 +85,7 @@
                 ],
                 tech: ["Blazor", "MS SQL Server", "Bootstrap", "Github"],
                 githubUrl: "https://github.com/lucasdep14/Medconnect",
+                logo: "images\\MedConnect_logo.png",
                 images: [
                     "images/metingen_MedConnect.png",
                     "images/historiek_MedConnect.png",
@@ -158,7 +160,11 @@
                     <!-- VDM Productions -->
                     <div onclick="navigateTo('vdm-productions')" class="group cursor-pointer bg-zinc-900/40 border border-zinc-800/80 rounded-xl p-6 hover:border-zinc-700 transition-all flex flex-col justify-between">
                         <div>
-                            <span class="text-xs font-medium text-indigo-400 uppercase tracking-wider">Client Project</span>
+                            <!-- LOGO & CATEGORIE -->
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-xs font-medium text-indigo-400 uppercase tracking-wider">Client Project</span>
+                                <img src="images/vdm_logo.png" alt="VDM Logo" class="w-8 h-8 object-contain rounded-md bg-zinc-950 p-1 border border-zinc-800" onerror="this.style.display='none'">
+                            </div>
                             <h3 class="text-xl font-semibold mt-2 group-hover:text-indigo-400 transition-colors">VDM Productions (MVLS Renting)</h3>
                             <p class="text-zinc-400 text-sm mt-3 leading-relaxed">Moderne, responsieve showcase website voor verhuur van licht- en geluidsapparatuur.</p>
                         </div>
@@ -176,7 +182,11 @@
                     <!-- MedConnect -->
                     <div onclick="navigateTo('medconnect')" class="group cursor-pointer bg-zinc-900/40 border border-zinc-800/80 rounded-xl p-6 hover:border-zinc-700 transition-all flex flex-col justify-between">
                         <div>
-                            <span class="text-xs font-medium text-indigo-400 uppercase tracking-wider">Eindwerk / Full-Stack</span>
+                            <!-- LOGO & CATEGORIE -->
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-xs font-medium text-indigo-400 uppercase tracking-wider">Eindwerk / Full-Stack</span>
+                                <img src="images/medconnect_logo.png" alt="MedConnect Logo" class="w-8 h-8 object-contain rounded-md bg-zinc-950 p-1 border border-zinc-800" onerror="this.style.display='none'">
+                            </div>
                             <h3 class="text-xl font-semibold mt-2 group-hover:text-indigo-400 transition-colors">MedConnect</h3>
                             <p class="text-zinc-400 text-sm mt-3 leading-relaxed">Totaaloplossing voor gegevensbeheer en communicatie in de gezondheidszorg.</p>
                         </div>
@@ -271,11 +281,14 @@
                         &larr; Terug naar overzicht
                     </button>
 
-                    <!-- HEADER MET DYNAMISCHE EXTERNE KNOPPEN -->
+                    <!-- HEADER MET LOGO & DYNAMISCHE EXTERNE KNOPPEN -->
                     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
-                        <div>
-                            <span class="text-xs font-medium text-indigo-400 uppercase tracking-wider">${project.category}</span>
-                            <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-zinc-100 mt-2">${project.title}</h1>
+                        <div class="flex items-start gap-4">
+                            ${project.logo ? `<img src="${project.logo}" alt="${project.title} logo" class="w-12 h-12 object-contain rounded-lg bg-zinc-900 p-1.5 border border-zinc-800 shrink-0" onerror="this.style.display='none'">` : ''}
+                            <div>
+                                <span class="text-xs font-medium text-indigo-400 uppercase tracking-wider">${project.category}</span>
+                                <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-zinc-100 mt-1">${project.title}</h1>
+                            </div>
                         </div>
                         
                         <div class="flex items-center gap-3">
