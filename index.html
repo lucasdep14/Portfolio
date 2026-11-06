@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="nl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas Depoortere — Portfolio | Web & IT Specialist</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Externe CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-zinc-950 text-zinc-100 font-sans antialiased">
+
+    <!-- NAVIGATIE -->
+    <header class="sticky top-0 z-50 bg-zinc-950/85 backdrop-blur-md border-b border-zinc-900">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="index.html#home" class="font-semibold text-lg tracking-tight hover:text-indigo-400 transition-colors">
+                Lucas Depoortere<span class="text-indigo-500">.</span>
+            </a>
+            <nav class="flex items-center gap-6 text-sm text-zinc-400">
+                <a href="index.html#over-mij" class="hover:text-zinc-100 transition-colors">Over mij</a>
+                <a href="index.html#projecten" class="hover:text-zinc-100 transition-colors">Projecten</a>
+                <a href="index.html#contact" class="px-4 py-2 bg-zinc-900 hover:bg-zinc-800 text-zinc-100 rounded-lg font-medium border border-zinc-800 transition-all">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="home">
+        <!-- HERO SECTION -->
+        <section id="over-mij" class="py-12 px-6 max-w-6xl mx-auto">
+            <div class="relative overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900">
+                <div class="grid grid-cols-1 lg:grid-cols-12 min-h-[480px]">
+                    
+                    <!-- FOTO LINKS -->
+                    <div class="lg:col-span-6 relative h-72 lg:h-auto overflow-hidden">
+                        <img src="images/Foto_Lucas.png" alt="Lucas Depoortere" class="w-full h-full object-cover object-top filter brightness-95 contrast-105">
+                        <div class="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-transparent via-zinc-900/40 to-zinc-900"></div>
+                    </div>
+
+                    <!-- TEKST & NAAM RECHTS -->
+                    <div class="lg:col-span-6 p-8 sm:p-12 flex flex-col justify-center relative z-10 bg-zinc-900/90 lg:bg-transparent">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-medium mb-4 w-max">
+                            <span class="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></span> Student-Zelfstandige
+                        </div>
+                        
+                        <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-zinc-100 mb-2">
+                            Lucas Depoortere
+                        </h1>
+                        <p class="text-lg font-medium text-indigo-400 mb-6">
+                            Web Development & Infrastructure Specialist
+                        </p>
+                        
+                        <p class="text-zinc-400 text-sm sm:text-base leading-relaxed mb-6">
+                            Als student-zelfstandige bouw ik moderne websites, custom software en betrouwbare IT-oplossingen. Momenteel studeer ik <strong class="text-zinc-200">Toegepaste Informatica</strong> aan VIVES met de afstudeerrichting <strong class="text-zinc-200">Cybersecurity en Infrastructure</strong>.
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-4 pt-4 border-t border-zinc-800/80 text-xs mb-8">
+                            <div>
+                                <span class="block text-zinc-500">Opleiding</span>
+                                <span class="font-medium text-zinc-200">Toegepaste Informatica</span>
+                            </div>
+                            <div>
+                                <span class="block text-zinc-500">Specialisatie</span>
+                                <span class="font-medium text-indigo-400">Cybersecurity & Infrastructure</span>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap gap-3">
+                            <a href="#projecten" class="px-5 py-2.5 bg-zinc-100 text-zinc-950 text-sm font-medium rounded-lg hover:bg-zinc-200 transition-colors">
+                                Bekijk projecten
+                            </a>
+                            <a href="#contact" class="px-5 py-2.5 bg-zinc-800 border border-zinc-700 text-zinc-200 text-sm font-medium rounded-lg hover:bg-zinc-700 transition-colors">
+                                Contacteer mij
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTEN SECTIE -->
+        <section id="projecten" class="py-16 px-6 max-w-6xl mx-auto border-t border-zinc-900">
+            <div class="mb-12">
+                <h2 class="text-2xl font-bold tracking-tight mb-2">Uitgelichte Projecten</h2>
+                <p class="text-zinc-400 text-sm">Een greep uit wat ik heb gebouwd en opgeleverd voor klanten en studie.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- VDM Productions -->
+                <a href="vdm-productions.html" class="group bg-zinc-900/40 border border-zinc-800/80 rounded-xl p-6 hover:border-zinc-700 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-medium text-indigo-400 uppercase tracking-wider">Client Project</span>
+                            <img src="images/vdm_logo.png" alt="VDM Logo" class="w-8 h-8 object-contain rounded-md bg-zinc-950 p-1 border border-zinc-800" onerror="this.style.display='none'">
+                        </div>
+                        <h3 class="text-xl font-semibold mt-2 group-hover:text-indigo-400 transition-colors">VDM Productions (MVLS Renting)</h3>
+                        <p class="text-zinc-400 text-sm mt-3 leading-relaxed">Moderne, responsieve showcase website voor verhuur van licht- en geluidsapparatuur.</p>
+                    </div>
+                    <div class="mt-6">
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs px-2.5 py-1 bg-zinc-800/60 rounded-md text-zinc-300">HTML5</span>
+                            <span class="text-xs px-2.5 py-1 bg-zinc-800/60 rounded-md text-zinc-300">CSS3</span>
+                        </div>
+                        <span class="text-sm font-medium text-zinc-200 inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                            Bekijk project &rarr;
+                        </span>
+                    </div>
+                </a>
+
+                <!-- MedConnect -->
+                <a href="medconnect.html" class="group bg-zinc-900/40 border border-zinc-800/80 rounded-xl p-6 hover:border-zinc-700 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-medium text-indigo-400 uppercase tracking-wider">Eindwerk / Full-Stack</span>
+                            <img src="images/medconnect_logo.png" alt="MedConnect Logo" class="w-8 h-8 object-contain rounded-md bg-zinc-950 p-1 border border-zinc-800" onerror="this.style.display='none'">
+                        </div>
+                        <h3 class="text-xl font-semibold mt-2 group-hover:text-indigo-400 transition-colors">MedConnect</h3>
+                        <p class="text-zinc-400 text-sm mt-3 leading-relaxed">Totaaloplossing voor gegevensbeheer en communicatie in de gezondheidszorg.</p>
+                    </div>
+                    <div class="mt-6">
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs px-2.5 py-1 bg-zinc-800/60 rounded-md text-zinc-300">Blazor</span>
+                            <span class="text-xs px-2.5 py-1 bg-zinc-800/60 rounded-md text-zinc-300">MS SQL Server</span>
+                            <span class="text-xs px-2.5 py-1 bg-zinc-800/60 rounded-md text-zinc-300">Bootstrap</span>
+                        </div>
+                        <span class="text-sm font-medium text-zinc-200 inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                            Bekijk project &rarr;
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTIE -->
+        <section class="py-16 px-6 max-w-6xl mx-auto border-t border-zinc-900">
+            <h2 class="text-2xl font-bold tracking-tight mb-8">Tech Stack & Vaardigheden</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <div class="bg-zinc-900/30 border border-zinc-800/60 rounded-xl p-6">
+                    <h3 class="font-semibold text-zinc-200 mb-4">Frontend & Web</h3>
+                    <ul class="space-y-2 text-sm text-zinc-400">
+                        <li>• HTML5 / CSS3</li>
+                        <li>• Tailwind CSS / Bootstrap</li>
+                        <li>• JavaScript (ES6+)</li>
+                        <li>• Responsive Design</li>
+                    </ul>
+                </div>
+                <div class="bg-zinc-900/30 border border-zinc-800/60 rounded-xl p-6">
+                    <h3 class="font-semibold text-zinc-200 mb-4">Backend & Database</h3>
+                    <ul class="space-y-2 text-sm text-zinc-400">
+                        <li>• Blazor / C#</li>
+                        <li>• PHP & Laravel</li>
+                        <li>• MS SQL Server / MySQL</li>
+                        <li>• Auth & Security Basics</li>
+                    </ul>
+                </div>
+                <div class="bg-zinc-900/30 border border-zinc-800/60 rounded-xl p-6">
+                    <h3 class="font-semibold text-zinc-200 mb-4">DevOps & Systems</h3>
+                    <ul class="space-y-2 text-sm text-zinc-400">
+                        <li>• Linux (Server Admin)</li>
+                        <li>• Docker Containers</li>
+                        <li>• TrueNAS / Storage</li>
+                        <li>• Netwerkbeheer</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTIE -->
+        <section id="contact" class="py-16 px-6 max-w-6xl mx-auto border-t border-zinc-900 mb-12">
+            <div class="bg-zinc-900/40 border border-zinc-800/80 rounded-2xl p-8 sm:p-12">
+                <div class="max-w-xl">
+                    <h2 class="text-2xl font-bold tracking-tight mb-2">Laten we samenwerken</h2>
+                    <p class="text-zinc-400 text-sm mb-6">Heb je een vraag, een project in gedachten of wil je sparren over IT-infrastructuur? Stuur gerust een bericht.</p>
+                    
+                    <form onsubmit="event.preventDefault(); alert('Bedankt voor je bericht!');" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-medium text-zinc-400 mb-1">Naam</label>
+                            <input type="text" required class="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-4 py-2.5 text-sm text-zinc-100 focus:outline-none focus:border-indigo-500 transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-medium text-zinc-400 mb-1">E-mailadres</label>
+                            <input type="email" required class="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-4 py-2.5 text-sm text-zinc-100 focus:outline-none focus:border-indigo-500 transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-medium text-zinc-400 mb-1">Bericht</label>
+                            <textarea rows="4" required class="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-4 py-2.5 text-sm text-zinc-100 focus:outline-none focus:border-indigo-500 transition-colors"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-medium rounded-lg transition-colors text-sm">
+                            Verstuur bericht
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-zinc-900 py-8 px-6 text-center text-sm text-zinc-500">
+        <p>&copy; 2026 Lucas Depoortere</p>
+    </footer>
+
+</body>
+</html>

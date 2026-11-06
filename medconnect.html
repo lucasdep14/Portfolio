@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="nl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedConnect — Lucas Depoortere</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-zinc-950 text-zinc-100 font-sans antialiased">
+
+    <!-- NAVIGATIE -->
+    <header class="sticky top-0 z-50 bg-zinc-950/85 backdrop-blur-md border-b border-zinc-900">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="font-semibold text-lg tracking-tight hover:text-indigo-400 transition-colors">
+                Lucas Depoortere<span class="text-indigo-500">.</span>
+            </a>
+            <nav class="flex items-center gap-6 text-sm text-zinc-400">
+                <a href="index.html#projecten" class="hover:text-zinc-100 transition-colors">&larr; Terug naar projecten</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="py-16 px-6 max-w-4xl mx-auto">
+        <a href="index.html#projecten" class="inline-flex items-center gap-2 text-sm text-zinc-400 hover:text-zinc-100 mb-8 transition-colors">
+            &larr; Terug naar overzicht
+        </a>
+
+        <!-- HEADER -->
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
+            <div class="flex items-start gap-4">
+                <img src="images/medconnect_logo.png" alt="MedConnect Logo" class="w-12 h-12 object-contain rounded-lg bg-zinc-900 p-1.5 border border-zinc-800 shrink-0" onerror="this.style.display='none'">
+                <div>
+                    <span class="text-xs font-medium text-indigo-400 uppercase tracking-wider">Full-Stack Web App / Eindwerk</span>
+                    <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-zinc-100 mt-1">MedConnect</h1>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-3">
+                <a href="https://github.com/lucasdep14/Medconnect" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-zinc-900 border border-zinc-800 hover:border-zinc-700 text-zinc-200 text-sm font-medium rounded-lg transition-colors inline-flex items-center gap-2">
+                    GitHub Repository &rarr;
+                </a>
+            </div>
+        </div>
+
+        <p class="text-lg text-zinc-300 leading-relaxed mb-8">Totaaloplossing ontwikkeld als eindwerk voor gegevensbeheer en communicatie in de medische sector.</p>
+
+        <!-- TECH BADGES -->
+        <div class="flex flex-wrap gap-2 mb-10 pb-8 border-b border-zinc-900">
+            <span class="text-xs px-3 py-1 bg-zinc-900 border border-zinc-800 rounded-md text-zinc-300">Blazor</span>
+            <span class="text-xs px-3 py-1 bg-zinc-900 border border-zinc-800 rounded-md text-zinc-300">MS SQL Server</span>
+            <span class="text-xs px-3 py-1 bg-zinc-900 border border-zinc-800 rounded-md text-zinc-300">Bootstrap</span>
+            <span class="text-xs px-3 py-1 bg-zinc-900 border border-zinc-800 rounded-md text-zinc-300">Github</span>
+        </div>
+
+        <!-- SCREENSHOT SLIDER -->
+        <div class="mb-12 space-y-4">
+            <h2 class="text-xl font-semibold text-zinc-200">Screenshots & Previews</h2>
+            <div class="relative rounded-xl overflow-hidden border border-zinc-800 bg-zinc-900 group">
+                <img id="slider-image" src="images/metingen_MedConnect.png" alt="MedConnect preview" class="w-full h-auto object-cover max-h-[500px]">
+                
+                <!-- KNOP VORIGE -->
+                <button onclick="prevImage()" class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-zinc-950/80 border border-zinc-700 text-white flex items-center justify-center hover:bg-indigo-600 hover:border-indigo-500 transition-colors shadow-lg">
+                    &#10094;
+                </button>
+                <!-- KNOP VOLGENDE -->
+                <button onclick="nextImage()" class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-zinc-950/80 border border-zinc-700 text-white flex items-center justify-center hover:bg-indigo-600 hover:border-indigo-500 transition-colors shadow-lg">
+                    &#10095;
+                </button>
+                <!-- TELLER -->
+                <div class="absolute bottom-3 right-3 px-3 py-1 bg-zinc-950/80 border border-zinc-800 rounded-md text-xs text-zinc-300 font-mono">
+                    <span id="slider-counter">1</span> / 3
+                </div>
+            </div>
+        </div>
+
+        <!-- BESCHRIJVING -->
+        <div class="space-y-6 text-zinc-400 leading-relaxed">
+            <h2 class="text-xl font-semibold text-zinc-200">Over dit project</h2>
+            <p>MedConnect is een full-stack webapplicatie ontworpen in Blazor om de administratieve lasten binnen de gezondheidszorg te verlichten. Het systeem stelt zorgverleners in staat om gestructureerd en vooral veilig gegevens te beheren, met grootte aandacht voor privacy en een makkelijke gebruikerservaring.</p>
+
+            <h2 class="text-xl font-semibold text-zinc-200 pt-4">Belangrijkste functionaliteiten & kenmerken</h2>
+            <ul class="space-y-3">
+                <li class="flex items-start gap-3"><span class="text-indigo-400 mt-1">&#10003;</span> <span>Beveiligde authenticatie en rollenbeheer</span></li>
+                <li class="flex items-start gap-3"><span class="text-indigo-400 mt-1">&#10003;</span> <span>Gestructureerde databasestructuur voor gevoelige gegevens</span></li>
+                <li class="flex items-start gap-3"><span class="text-indigo-400 mt-1">&#10003;</span> <span>Intuïtief dashboard met real-time overzichten</span></li>
+                <li class="flex items-start gap-3"><span class="text-indigo-400 mt-1">&#10003;</span> <span>Volledige documentatie en ontwikkelingscyclus doorlopen</span></li>
+                <li class="flex items-start gap-3"><span class="text-indigo-400 mt-1">&#10003;</span> <span>Hardware en sensoren uitlezen met een ESP-32</span></li>
+            </ul>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-zinc-900 py-8 px-6 text-center text-sm text-zinc-500">
+        <p>&copy; 2026 Lucas Depoortere</p>
+    </footer>
+
+    <!-- SLIDER LOGICA -->
+    <script>
+        const images = [
+            "images/metingen_MedConnect.png",
+            "images/historiek_MedConnect.png",
+            "images/printplaat_MedConnect.png"
+        ];
+        let currentIndex = 0;
+
+        function updateSlider() {
+            document.getElementById('slider-image').src = images[currentIndex];
+            document.getElementById('slider-counter').textContent = currentIndex + 1;
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            updateSlider();
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            updateSlider();
+        }
+    </script>
+</body>
+</html>

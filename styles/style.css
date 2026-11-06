@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #09090b; /* bg-zinc-950 */
+    color: #f4f4f5; /* text-zinc-100 */
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Extra selectie kleuren */
+::selection {
+  background-color: #6366f1;
+  color: #ffffff;
+}
