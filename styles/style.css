@@ -1,16 +1,39 @@
-@import "tailwindcss";
+/* Custom accent styling & smooth interactions for Lucas Depoortere Portfolio */
 
-@layer base {
-  body {
-    background-color: #09090b; /* bg-zinc-950 */
-    color: #f4f4f5; /* text-zinc-100 */
-    font-family: 'Inter', sans-serif;
-    -webkit-font-smoothing: antialiased;
-  }
+::selection {
+    background-color: #6366f1;
+    color: #ffffff;
 }
 
-/* Extra selectie kleuren */
-::selection {
-  background-color: #6366f1;
-  color: #ffffff;
+/* Custom modern scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #09090b;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #27272a;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3f3f46;
+}
+
+/* Subtle glow effects */
+.glow-card {
+    position: relative;
+}
+
+.glow-card::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    background: radial-gradient(circle at top right, rgba(99, 102, 241, 0.15), transparent 70%);
+    border-radius: inherit;
+    z-index: -1;
+    pointer-events: none;
 }
