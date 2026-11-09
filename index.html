@@ -6,23 +6,19 @@
     <title>Lucas Depoortere — Webdesign & Zorgeloze Webhosting voor KMO's</title>
     <meta name="description" content="Handgemaakte websites in pure code en betrouwbare webhosting voor zelfstandigen en KMO's. Razendsnel, veilig en inclusief zorgeloos beheer.">
     
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Externe CSS -->
     <link rel="stylesheet" href="css/style.css">
     
-    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 </head>
 <body class="bg-zinc-950 text-zinc-100 font-sans antialiased selection:bg-indigo-500 selection:text-white">
 
-    <!-- NAVIGATIE -->
+    <!-- NAV -->
     <header class="sticky top-0 z-50 bg-zinc-950/85 backdrop-blur-md border-b border-zinc-900">
         <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
             <a href="#home" class="flex items-center gap-3 font-semibold text-lg tracking-tight hover:text-indigo-400 transition-colors">
@@ -37,7 +33,6 @@
                 <a href="#projecten" class="hover:text-zinc-100 transition-colors">Realisaties</a>
                 <a href="#contact" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg font-medium transition-all shadow-sm">Offerte & Contact</a>
             </nav>
-            <!-- Mobiele contact knop -->
             <a href="#contact" class="md:hidden px-3.5 py-1.5 bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-medium rounded-lg transition-all">
                 Contact
             </a>
@@ -45,18 +40,18 @@
     </header>
 
     <main id="home">
-        <!-- HERO / OVER MIJ SECTION -->
+        <!-- HERO -->
         <section id="over-mij" class="py-10 sm:py-16 px-6 max-w-6xl mx-auto">
             <div class="relative overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900 shadow-2xl">
                 <div class="grid grid-cols-1 lg:grid-cols-12 min-h-[520px]">
                     
-                    <!-- FOTO LINKS -->
+                    <!-- FOTO -->
                     <div class="lg:col-span-5 relative h-80 sm:h-96 lg:h-auto overflow-hidden bg-zinc-950 flex items-center justify-center">
                         <img src="images/Foto_Lucas.png" alt="Lucas Depoortere" class="w-full h-full object-cover object-top filter brightness-95 contrast-105" onerror="this.onerror=null; this.src='images/logo.svg'; this.className='w-32 h-32 opacity-40 p-4';">
                         <div class="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-transparent via-zinc-900/30 to-zinc-900 pointer-events-none"></div>
                     </div>
 
-                    <!-- PROFILERING & KRACHTIGE BEDRIJFSBOODSCHAP RECHTS -->
+                    <!-- INFO -->
                     <div class="lg:col-span-7 p-8 sm:p-12 flex flex-col justify-center relative z-10 bg-zinc-900/95 lg:bg-transparent">
                         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-semibold mb-5 w-max">
                             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Student-Zelfstandige • Webdesign & Hosting
@@ -71,7 +66,7 @@
                             Ik ben <strong>Lucas Depoortere</strong>. Als gedreven student-ondernemer help ik zelfstandigen en KMO's met handgemaakte websites in pure code. Geen trage, onveilige WordPress-templates of torenhoge agency-facturen, maar moderne sites die in <strong>minder dan 1 seconde laden</strong>, inclusief hosting, zakelijke e-mail en persoonlijk onderhoud.
                         </p>
 
-                        <!-- KENNIS & BACKGROUND BOXJES -->
+                        <!-- OPLEIDING -->
                         <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-5 border-t border-zinc-800 text-xs mb-8">
                             <div class="bg-zinc-950/60 p-3 rounded-xl border border-zinc-800/60">
                                 <span class="block text-zinc-500 text-[11px] uppercase tracking-wider">Opleiding</span>
@@ -90,7 +85,7 @@
                             </div>
                         </div>
 
-                        <!-- ACTIEKNOPPEN -->
+                        <!-- BUTTONS -->
                         <div class="flex flex-wrap items-center gap-3">
                             <a href="#contact" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold rounded-xl transition-all shadow-lg shadow-indigo-600/20">
                                 Vrijblijvende preview aanvragen
@@ -105,7 +100,7 @@
             </div>
         </section>
 
-        <!-- DIENSTEN SECTIE -->
+        <!-- DIENSTEN -->
         <section id="diensten" class="py-16 px-6 max-w-6xl mx-auto border-t border-zinc-900">
             <div class="mb-12">
                 <span class="text-xs font-semibold text-indigo-400 uppercase tracking-widest">Diensten</span>
@@ -173,7 +168,7 @@
             </div>
         </section>
 
-        <!-- WAAROM PURE CODE SECTIE (VERVANGT OUDE CV TECH-STACK) -->
+        <!-- WAAROM PURE CODE SECTIE -->
         <section id="waarom-code" class="py-16 px-6 max-w-6xl mx-auto border-t border-zinc-900">
             <div class="mb-12">
                 <span class="text-xs font-semibold text-indigo-400 uppercase tracking-widest">Het Verschil</span>
@@ -216,7 +211,7 @@
             </div>
         </section>
 
-        <!-- WERKWIJZE SECTIE -->
+        <!-- WERKWIJZE -->
         <section id="werkwijze" class="py-16 px-6 max-w-6xl mx-auto border-t border-zinc-900">
             <div class="mb-12">
                 <span class="text-xs font-semibold text-indigo-400 uppercase tracking-widest">Eenvoudig Proces</span>
@@ -254,7 +249,7 @@
             </div>
         </section>
 
-        <!-- PROJECTEN / REALISATIES SECTIE -->
+        <!-- PROJECTEN -->
         <section id="projecten" class="py-16 px-6 max-w-6xl mx-auto border-t border-zinc-900">
             <div class="mb-12">
                 <span class="text-xs font-semibold text-indigo-400 uppercase tracking-widest">Realisaties</span>
@@ -333,12 +328,12 @@
             </div>
         </section>
 
-        <!-- CONTACT SECTIE -->
+        <!-- CONTACT -->
         <section id="contact" class="py-16 px-6 max-w-6xl mx-auto border-t border-zinc-900 mb-12">
             <div class="bg-gradient-to-b from-zinc-900/80 to-zinc-900/40 border border-zinc-800 rounded-3xl p-8 sm:p-12 relative overflow-hidden">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
                     
-                    <!-- INFO & DIRECT CONTACT LINKS -->
+                    <!-- CONTACT -->
                     <div class="lg:col-span-5 flex flex-col justify-between">
                         <div>
                             <span class="text-xs font-semibold text-indigo-400 uppercase tracking-widest">Contact & Offerte</span>
