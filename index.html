@@ -3,78 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucas Depoortere — Portfolio | Web & IT Specialist</title>
+    <title>Lucas Depoortere — Webdesign & Zorgeloze Webhosting voor KMO's</title>
+    <meta name="description" content="Handgemaakte websites in pure code en betrouwbare webhosting voor zelfstandigen en KMO's. Razendsnel, veilig en inclusief zorgeloos beheer.">
+    
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <!-- Externe CSS -->
     <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 </head>
-<body class="bg-zinc-950 text-zinc-100 font-sans antialiased">
+<body class="bg-zinc-950 text-zinc-100 font-sans antialiased selection:bg-indigo-500 selection:text-white">
 
     <!-- NAVIGATIE -->
     <header class="sticky top-0 z-50 bg-zinc-950/85 backdrop-blur-md border-b border-zinc-900">
         <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="index.html#home" class="font-semibold text-lg tracking-tight hover:text-indigo-400 transition-colors">
-                Lucas Depoortere<span class="text-indigo-500">.</span>
+            <a href="#home" class="flex items-center gap-3 font-semibold text-lg tracking-tight hover:text-indigo-400 transition-colors">
+                <img src="images/logo.svg" alt="Lucas Depoortere Logo" class="w-8 h-8 rounded-lg shadow-sm">
+                <span>Lucas Depoortere<span class="text-indigo-500">.</span></span>
             </a>
-            <nav class="flex items-center gap-6 text-sm text-zinc-400">
-                <a href="index.html#over-mij" class="hover:text-zinc-100 transition-colors">Over mij</a>
-                <a href="index.html#projecten" class="hover:text-zinc-100 transition-colors">Projecten</a>
-                <a href="index.html#contact" class="px-4 py-2 bg-zinc-900 hover:bg-zinc-800 text-zinc-100 rounded-lg font-medium border border-zinc-800 transition-all">Contact</a>
+            <nav class="hidden md:flex items-center gap-7 text-sm text-zinc-400">
+                <a href="#over-mij" class="hover:text-zinc-100 transition-colors">Over mij</a>
+                <a href="#diensten" class="hover:text-zinc-100 transition-colors">Diensten</a>
+                <a href="#waarom-code" class="hover:text-zinc-100 transition-colors">Waarom Pure Code?</a>
+                <a href="#werkwijze" class="hover:text-zinc-100 transition-colors">Werkwijze</a>
+                <a href="#projecten" class="hover:text-zinc-100 transition-colors">Realisaties</a>
+                <a href="#contact" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg font-medium transition-all shadow-sm">Offerte & Contact</a>
             </nav>
+            <!-- Mobiele contact knop -->
+            <a href="#contact" class="md:hidden px-3.5 py-1.5 bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-medium rounded-lg transition-all">
+                Contact
+            </a>
         </div>
     </header>
 
     <main id="home">
-        <!-- HERO SECTION -->
-        <section id="over-mij" class="py-12 px-6 max-w-6xl mx-auto">
-            <div class="relative overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900">
-                <div class="grid grid-cols-1 lg:grid-cols-12 min-h-[480px]">
+        <!-- HERO / OVER MIJ SECTION -->
+        <section id="over-mij" class="py-10 sm:py-16 px-6 max-w-6xl mx-auto">
+            <div class="relative overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900 shadow-2xl">
+                <div class="grid grid-cols-1 lg:grid-cols-12 min-h-[520px]">
                     
                     <!-- FOTO LINKS -->
-                    <div class="lg:col-span-6 relative h-72 lg:h-auto overflow-hidden">
-                        <img src="images/Foto_Lucas.png" alt="Lucas Depoortere" class="w-full h-full object-cover object-top filter brightness-95 contrast-105">
-                        <div class="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-transparent via-zinc-900/40 to-zinc-900"></div>
+                    <div class="lg:col-span-5 relative h-80 sm:h-96 lg:h-auto overflow-hidden bg-zinc-950 flex items-center justify-center">
+                        <img src="images/Foto_Lucas.png" alt="Lucas Depoortere" class="w-full h-full object-cover object-top filter brightness-95 contrast-105" onerror="this.onerror=null; this.src='images/logo.svg'; this.className='w-32 h-32 opacity-40 p-4';">
+                        <div class="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-transparent via-zinc-900/30 to-zinc-900 pointer-events-none"></div>
                     </div>
 
-                    <!-- TEKST & NAAM RECHTS -->
-                    <div class="lg:col-span-6 p-8 sm:p-12 flex flex-col justify-center relative z-10 bg-zinc-900/90 lg:bg-transparent">
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-medium mb-4 w-max">
-                            <span class="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></span> Student-Zelfstandige
+                    <!-- PROFILERING & KRACHTIGE BEDRIJFSBOODSCHAP RECHTS -->
+                    <div class="lg:col-span-7 p-8 sm:p-12 flex flex-col justify-center relative z-10 bg-zinc-900/95 lg:bg-transparent">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-semibold mb-5 w-max">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Student-Zelfstandige • Webdesign & Hosting
                         </div>
                         
-                        <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-zinc-100 mb-2">
-                            Lucas Depoortere
+                        <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-zinc-100 mb-4 leading-tight">
+                            Razendsnelle websites.<br>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-indigo-300 to-cyan-400">Zorgeloos beheerd.</span>
                         </h1>
-                        <p class="text-lg font-medium text-indigo-400 mb-6">
-                            Web Development & Infrastructure Specialist
-                        </p>
                         
-                        <p class="text-zinc-400 text-sm sm:text-base leading-relaxed mb-6">
-                            Als student-zelfstandige bouw ik moderne websites, custom software en betrouwbare IT-oplossingen. Momenteel studeer ik <strong class="text-zinc-200">Toegepaste Informatica</strong> aan VIVES met de afstudeerrichting <strong class="text-zinc-200">Cybersecurity en Infrastructure</strong>.
+                        <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-6">
+                            Ik ben <strong>Lucas Depoortere</strong>. Als gedreven student-ondernemer help ik zelfstandigen en KMO's met handgemaakte websites in pure code. Geen trage, onveilige WordPress-templates of torenhoge agency-facturen, maar moderne sites die in <strong>minder dan 1 seconde laden</strong>, inclusief hosting, zakelijke e-mail en persoonlijk onderhoud.
                         </p>
 
-                        <div class="grid grid-cols-2 gap-4 pt-4 border-t border-zinc-800/80 text-xs mb-8">
-                            <div>
-                                <span class="block text-zinc-500">Opleiding</span>
-                                <span class="font-medium text-zinc-200">Toegepaste Informatica</span>
+                        <!-- KENNIS & BACKGROUND BOXJES -->
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-5 border-t border-zinc-800 text-xs mb-8">
+                            <div class="bg-zinc-950/60 p-3 rounded-xl border border-zinc-800/60">
+                                <span class="block text-zinc-500 text-[11px] uppercase tracking-wider">Opleiding</span>
+                                <span class="font-semibold text-zinc-200">Toegepaste Informatica</span>
+                                <span class="block text-[11px] text-zinc-400 mt-0.5">Hogeschool VIVES</span>
                             </div>
-                            <div>
-                                <span class="block text-zinc-500">Specialisatie</span>
-                                <span class="font-medium text-indigo-400">Cybersecurity & Infrastructure</span>
+                            <div class="bg-zinc-950/60 p-3 rounded-xl border border-zinc-800/60">
+                                <span class="block text-zinc-500 text-[11px] uppercase tracking-wider">Specialisatie</span>
+                                <span class="font-semibold text-indigo-400">Cybersecurity & Infrastructuur</span>
+                                <span class="block text-[11px] text-zinc-400 mt-0.5">Veilige webarchitectuur</span>
+                            </div>
+                            <div class="col-span-2 sm:col-span-1 bg-zinc-950/60 p-3 rounded-xl border border-zinc-800/60">
+                                <span class="block text-zinc-500 text-[11px] uppercase tracking-wider">Laadsnelheid</span>
+                                <span class="font-semibold text-emerald-400">&lt; 1 Seconde</span>
+                                <span class="block text-[11px] text-zinc-400 mt-0.5">Google Core Web Vitals 100</span>
                             </div>
                         </div>
 
-                        <div class="flex flex-wrap gap-3">
-                            <a href="#projecten" class="px-5 py-2.5 bg-zinc-100 text-zinc-950 text-sm font-medium rounded-lg hover:bg-zinc-200 transition-colors">
-                                Bekijk projecten
+                        <!-- ACTIEKNOPPEN -->
+                        <div class="flex flex-wrap items-center gap-3">
+                            <a href="#contact" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold rounded-xl transition-all shadow-lg shadow-indigo-600/20">
+                                Vrijblijvende preview aanvragen
                             </a>
-                            <a href="#contact" class="px-5 py-2.5 bg-zinc-800 border border-zinc-700 text-zinc-200 text-sm font-medium rounded-lg hover:bg-zinc-700 transition-colors">
-                                Contacteer mij
+                            <a href="#projecten" class="px-6 py-3 bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 text-zinc-200 text-sm font-semibold rounded-xl transition-colors">
+                                Bekijk realisaties &rarr;
                             </a>
                         </div>
                     </div>
@@ -83,125 +105,335 @@
             </div>
         </section>
 
-        <!-- PROJECTEN SECTIE -->
+        <!-- DIENSTEN SECTIE -->
+        <section id="diensten" class="py-16 px-6 max-w-6xl mx-auto border-t border-zinc-900">
+            <div class="mb-12">
+                <span class="text-xs font-semibold text-indigo-400 uppercase tracking-widest">Diensten</span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight mt-1 text-zinc-100">Alles-in-één weboplossing voor jouw zaak</h2>
+                <p class="text-zinc-400 text-sm sm:text-base mt-2 max-w-2xl">Geen ingewikkeld technisch jargon of losse facturen van tien verschillende partijen. Ik verzorg jouw online aanwezigheid van A tot Z.</p>
+            </div>
+      
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Dienst 1: Webdesign -->
+                <div class="bg-zinc-900/50 border border-zinc-800/80 rounded-2xl p-7 flex flex-col justify-between hover:border-indigo-500/50 transition-all group">             
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-5 font-bold text-base group-hover:scale-105 transition-transform">
+                            01
+                        </div>
+                        <h3 class="text-xl font-bold text-zinc-100 mb-2.5">Webdesign op Maat</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                            Handgemaakte, moderne one-pagers en bedrijfswebsites in pure code. Razendsnel, perfect responsive op smartphone en desktop, en geoptimaliseerd voor lokale vindbaarheid in Google.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-zinc-300 space-y-2.5 border-t border-zinc-800/80 pt-5">
+                        <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Laadtijd onder 1 seconde</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Mobielvriendelijk & responsive</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Lokale SEO & Google Bedrijfsprofiel ready</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Direct contactformulier & WhatsApp knop</li>
+                    </ul>
+                </div>
+      
+                <!-- Dienst 2: Webhosting & Domein -->
+                <div class="bg-zinc-900/50 border border-zinc-800/80 rounded-2xl p-7 flex flex-col justify-between hover:border-indigo-500/50 transition-all group">             
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-5 font-bold text-base group-hover:scale-105 transition-transform">
+                            02
+                        </div>
+                        <h3 class="text-xl font-bold text-zinc-100 mb-2.5">Zorgeloze Webhosting & Domein</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                            Snelle, betrouwbare cloud hosting en het volledige beheer van jouw <code class="text-indigo-300">.be</code> domeinnaam. Inclusief professionele e-mailadressen en continue SSL-beveiliging.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-zinc-300 space-y-2.5 border-t border-zinc-800/80 pt-5">
+                        <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Inclusief .be domeinregistratie & DNS</li> 
+                        <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Gratis SSL-beveiliging (groen slotje)</li> 
+                        <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Zakelijke e-mail (info@jouwzaak.be)</li> 
+                        <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> 99,9% gegarandeerde uptime & monitoring</li>
+                    </ul>
+                </div>
+      
+                <!-- Dienst 3: Onderhoud & Ontzorging -->
+                <div class="bg-zinc-900/50 border border-zinc-800/80 rounded-2xl p-7 flex flex-col justify-between hover:border-indigo-500/50 transition-all group">
+                    <div> 
+                        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-5 font-bold text-base group-hover:scale-105 transition-transform">
+                            03
+                        </div>
+                        <h3 class="text-xl font-bold text-zinc-100 mb-2.5">Onderhoud & Snelle Aanpassingen</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6"> 
+                            Wil je nieuwe foto's toevoegen, een tekst aanpassen of prijzen wijzigen? Eén simpel mailtje of WhatsAppje en het staat binnen 24 tot 48 uur online.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-zinc-300 space-y-2.5 border-t border-zinc-800/80 pt-5">
+                        <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Snelle content-updates zonder uurtje-factuurtje</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Automatische dagelijkse/wekelijkse back-ups</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Eén vast aanspreekpunt via WhatsApp of telefoon</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Geen wachttijden bij logge supportafdelingen</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- WAAROM PURE CODE SECTIE (VERVANGT OUDE CV TECH-STACK) -->
+        <section id="waarom-code" class="py-16 px-6 max-w-6xl mx-auto border-t border-zinc-900">
+            <div class="mb-12">
+                <span class="text-xs font-semibold text-indigo-400 uppercase tracking-widest">Het Verschil</span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight mt-1 text-zinc-100">Waarom handgemaakte code wint van trage WordPress-sites</h2>
+                <p class="text-zinc-400 text-sm sm:text-base mt-2 max-w-2xl">Veel webbureaus bouwen zware websites vol onnodige plug-ins die traag laden en gehackt worden. Ik pak het radicaal anders aan.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Voordeel 1 -->
+                <div class="bg-zinc-900/40 border border-zinc-800/70 rounded-2xl p-6 hover:bg-zinc-900/70 transition-colors">   
+                    <h3 class="font-bold text-zinc-100 text-base mb-2">Onverslaanbare Snelheid</h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed">
+                        Pure code laadt in minder dan 1 seconde. Bezoekers haken niet af en Google geeft snelle sites automatisch een voorkeurspositie in de zoekresultaten.
+                    </p>
+                </div>
+
+                <!-- Voordeel 2 -->
+                <div class="bg-zinc-900/40 border border-zinc-800/70 rounded-2xl p-6 hover:bg-zinc-900/70 transition-colors">
+                    <h3 class="font-bold text-zinc-100 text-base mb-2">Nooit Meer Gehackt</h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed">
+                        Geen kwetsbare plug-ins of WordPress-databases die continu beveiligingsupdates eisen. Jouw site is van nature oersterk en stabiel.
+                    </p>
+                </div>
+
+                <!-- Voordeel 3 -->
+                <div class="bg-zinc-900/40 border border-zinc-800/70 rounded-2xl p-6 hover:bg-zinc-900/70 transition-colors">
+                    <h3 class="font-bold text-zinc-100 text-base mb-2">100% Maatwerk Design</h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed">
+                        Geen dertien-in-een-dozijn sjabloon waar je concurrent ook mee rondloopt. Jouw website wordt ontworpen rond jouw specifieke huisstijl en klanten.
+                    </p>
+                </div>
+
+                <!-- Voordeel 4 -->
+                <div class="bg-zinc-900/40 border border-zinc-800/70 rounded-2xl p-6 hover:bg-zinc-900/70 transition-colors">
+                    <h3 class="font-bold text-zinc-100 text-base mb-2">Direct Persoonlijk Contact</h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed">
+                        Als student-zelfstandige ben ik je enige aanspreekpunt. Flexibel bereikbaar, betrokken bij jouw project en zonder dure bureauoverhead.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- WERKWIJZE SECTIE -->
+        <section id="werkwijze" class="py-16 px-6 max-w-6xl mx-auto border-t border-zinc-900">
+            <div class="mb-12">
+                <span class="text-xs font-semibold text-indigo-400 uppercase tracking-widest">Eenvoudig Proces</span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight mt-1 text-zinc-100">In 3 stappen naar jouw nieuwe website</h2>
+                <p class="text-zinc-400 text-sm sm:text-base mt-2 max-w-2xl">Geen maandenlange trajecten of eindeloze vergaderingen. We schakelen snel en doelgericht.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+                <!-- Stap 1 -->
+                <div class="bg-zinc-900/40 border border-zinc-800/80 rounded-2xl p-7 relative">
+                    <span class="text-4xl font-black text-indigo-500/20 mb-2 block">01</span>
+                    <h3 class="text-lg font-bold text-zinc-100 mb-2">Vrijblijvend Gesprek</h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed">
+                        We bespreken kort jouw zaak, diensten en doelgroep (telefonisch, via WhatsApp of bij een koffie). Je vertelt wat je nodig hebt en ik denk direct met je mee.
+                    </p>
+                </div>
+
+                <!-- Stap 2 -->
+                <div class="bg-zinc-900/40 border border-zinc-800/80 rounded-2xl p-7 relative">
+                    <span class="text-4xl font-black text-indigo-500/20 mb-2 block">02</span>
+                    <h3 class="text-lg font-bold text-zinc-100 mb-2">Ontwerp & Live Preview</h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed">
+                        Ik ga aan de slag en bouw een werkende concept-preview van je website. Je test de site op je eigen smartphone en we sturen bij waar gewenst.
+                    </p>
+                </div>
+
+                <!-- Stap 3 -->
+                <div class="bg-zinc-900/40 border border-zinc-800/80 rounded-2xl p-7 relative">
+                    <span class="text-4xl font-black text-indigo-500/20 mb-2 block">03</span>
+                    <h3 class="text-lg font-bold text-zinc-100 mb-2">Livegang & Zorgeloos Beheer</h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed">
+                        Ik koppel je domeinnaam, stel je zakelijke e-mail in en zet de site live. Vanaf dan neem ik alle hosting, beveiliging en updates voor mijn rekening.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTEN / REALISATIES SECTIE -->
         <section id="projecten" class="py-16 px-6 max-w-6xl mx-auto border-t border-zinc-900">
             <div class="mb-12">
-                <h2 class="text-2xl font-bold tracking-tight mb-2">Uitgelichte Projecten</h2>
-                <p class="text-zinc-400 text-sm">Een greep uit wat ik heb gebouwd en opgeleverd voor klanten en studie.</p>
+                <span class="text-xs font-semibold text-indigo-400 uppercase tracking-widest">Realisaties</span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight mt-1 text-zinc-100">Bewezen resultaten in pure code</h2>
+                <p class="text-zinc-400 text-sm sm:text-base mt-2">Een greep uit recent opgeleverde websites en technische projecten.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- VDM Productions -->
-                <a href="vdm-productions.html" class="group bg-zinc-900/40 border border-zinc-800/80 rounded-xl p-6 hover:border-zinc-700 transition-all flex flex-col justify-between">
+                <div class="group bg-zinc-900/50 border border-zinc-800/80 rounded-2xl p-8 hover:border-indigo-500/50 transition-all flex flex-col justify-between">
                     <div>
-                        <div class="flex items-center justify-between mb-3">
-                            <span class="text-xs font-medium text-indigo-400 uppercase tracking-wider">Client Project</span>
-                            <img src="images/vdm_logo.png" alt="VDM Logo" class="w-8 h-8 object-contain rounded-md bg-zinc-950 p-1 border border-zinc-800" onerror="this.style.display='none'">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 uppercase tracking-wider">
+                                Klantensite • Verhuur
+                            </span>
+                            <span class="text-xs text-emerald-400 font-medium flex items-center gap-1.5">
+                                <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Live Klant
+                            </span>
                         </div>
-                        <h3 class="text-xl font-semibold mt-2 group-hover:text-indigo-400 transition-colors">VDM Productions (MVLS Renting)</h3>
-                        <p class="text-zinc-400 text-sm mt-3 leading-relaxed">Moderne, responsieve showcase website voor verhuur van licht- en geluidsapparatuur.</p>
+                        <h3 class="text-2xl font-bold text-zinc-100 mt-2 group-hover:text-indigo-400 transition-colors">
+                            VDM Productions
+                        </h3>
+                        <p class="text-zinc-400 text-sm mt-3 leading-relaxed">
+                            Complete showcase one-pager en interactieve catalogus voor de verhuur van professionele licht- en geluidsinstallaties. Gebouwd in pure code voor maximale snelheid en heldere navigatie op smartphone en desktop.
+                        </p>
                     </div>
-                    <div class="mt-6">
+
+                    <div class="mt-8 pt-6 border-t border-zinc-800/80">
                         <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="text-xs px-2.5 py-1 bg-zinc-800/60 rounded-md text-zinc-300">HTML5</span>
-                            <span class="text-xs px-2.5 py-1 bg-zinc-800/60 rounded-md text-zinc-300">CSS3</span>
+                            <span class="text-xs px-2.5 py-1 bg-zinc-800/60 rounded-md text-zinc-300 font-mono">HTML5 / CSS3</span>
+                            <span class="text-xs px-2.5 py-1 bg-zinc-800/60 rounded-md text-zinc-300 font-mono">Tailwind</span>
+                            <span class="text-xs px-2.5 py-1 bg-zinc-800/60 rounded-md text-zinc-300 font-mono">Lean Cloud Hosting</span>
+                            <span class="text-xs px-2.5 py-1 bg-zinc-800/60 rounded-md text-zinc-300 font-mono">&lt; 1s Laadtijd</span>
                         </div>
-                        <span class="text-sm font-medium text-zinc-200 inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                            Bekijk project &rarr;
-                        </span>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm font-semibold text-zinc-200 inline-flex items-center gap-1 group-hover:text-indigo-400 transition-colors">
+                                Bekijk showcase details &rarr;
+                            </span>
+                        </div>
                     </div>
-                </a>
+                </div>
 
                 <!-- MedConnect -->
-                <a href="medconnect.html" class="group bg-zinc-900/40 border border-zinc-800/80 rounded-xl p-6 hover:border-zinc-700 transition-all flex flex-col justify-between">
+                <div class="group bg-zinc-900/50 border border-zinc-800/80 rounded-2xl p-8 hover:border-indigo-500/50 transition-all flex flex-col justify-between">
                     <div>
-                        <div class="flex items-center justify-between mb-3">
-                            <span class="text-xs font-medium text-indigo-400 uppercase tracking-wider">Eindwerk / Full-Stack</span>
-                            <img src="images/medconnect_logo.png" alt="MedConnect Logo" class="w-8 h-8 object-contain rounded-md bg-zinc-950 p-1 border border-zinc-800" onerror="this.style.display='none'">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 uppercase tracking-wider">
+                                Technische Webapplicatie
+                            </span>
+                            <span class="text-xs text-zinc-400 font-medium">
+                                Eindwerk
+                            </span>
                         </div>
-                        <h3 class="text-xl font-semibold mt-2 group-hover:text-indigo-400 transition-colors">MedConnect</h3>
-                        <p class="text-zinc-400 text-sm mt-3 leading-relaxed">Totaaloplossing voor gegevensbeheer en communicatie in de gezondheidszorg.</p>
+                        <h3 class="text-2xl font-bold text-zinc-100 mt-2 group-hover:text-cyan-400 transition-colors">
+                            MedConnect Platform
+                        </h3>
+                        <p class="text-zinc-400 text-sm mt-3 leading-relaxed">
+                            Geavanceerd full-stack webportaal voor veilige gegevensverwerking en gestroomlijnde communicatie binnen de gezondheidszorg. Demonstreert diepgaande kennis van relationele databases, backend API's en authenticatie.
+                        </p>
                     </div>
-                    <div class="mt-6">
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="text-xs px-2.5 py-1 bg-zinc-800/60 rounded-md text-zinc-300">Blazor</span>
-                            <span class="text-xs px-2.5 py-1 bg-zinc-800/60 rounded-md text-zinc-300">MS SQL Server</span>
-                            <span class="text-xs px-2.5 py-1 bg-zinc-800/60 rounded-md text-zinc-300">Bootstrap</span>
-                        </div>
-                        <span class="text-sm font-medium text-zinc-200 inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                            Bekijk project &rarr;
-                        </span>
-                    </div>
-                </a>
-            </div>
-        </section>
 
-        <!-- SKILLS SECTIE -->
-        <section class="py-16 px-6 max-w-6xl mx-auto border-t border-zinc-900">
-            <h2 class="text-2xl font-bold tracking-tight mb-8">Tech Stack & Vaardigheden</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                <div class="bg-zinc-900/30 border border-zinc-800/60 rounded-xl p-6">
-                    <h3 class="font-semibold text-zinc-200 mb-4">Frontend & Web</h3>
-                    <ul class="space-y-2 text-sm text-zinc-400">
-                        <li>• HTML5 / CSS3</li>
-                        <li>• Tailwind CSS / Bootstrap</li>
-                        <li>• JavaScript (ES6+)</li>
-                        <li>• Responsive Design</li>
-                    </ul>
-                </div>
-                <div class="bg-zinc-900/30 border border-zinc-800/60 rounded-xl p-6">
-                    <h3 class="font-semibold text-zinc-200 mb-4">Backend & Database</h3>
-                    <ul class="space-y-2 text-sm text-zinc-400">
-                        <li>• Blazor / C#</li>
-                        <li>• PHP & Laravel</li>
-                        <li>• MS SQL Server / MySQL</li>
-                        <li>• Auth & Security Basics</li>
-                    </ul>
-                </div>
-                <div class="bg-zinc-900/30 border border-zinc-800/60 rounded-xl p-6">
-                    <h3 class="font-semibold text-zinc-200 mb-4">DevOps & Systems</h3>
-                    <ul class="space-y-2 text-sm text-zinc-400">
-                        <li>• Linux (Server Admin)</li>
-                        <li>• Docker Containers</li>
-                        <li>• TrueNAS / Storage</li>
-                        <li>• Netwerkbeheer</li>
-                    </ul>
+                    <div class="mt-8 pt-6 border-t border-zinc-800/80">
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs px-2.5 py-1 bg-zinc-800/60 rounded-md text-zinc-300 font-mono">Blazor / C#</span>
+                            <span class="text-xs px-2.5 py-1 bg-zinc-800/60 rounded-md text-zinc-300 font-mono">MS SQL Server</span>
+                            <span class="text-xs px-2.5 py-1 bg-zinc-800/60 rounded-md text-zinc-300 font-mono">Data Security</span>
+                            <span class="text-xs px-2.5 py-1 bg-zinc-800/60 rounded-md text-zinc-300 font-mono">Role-based Auth</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm font-semibold text-zinc-200 inline-flex items-center gap-1 group-hover:text-cyan-400 transition-colors">
+                                Bekijk applicatie details &rarr;
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- CONTACT SECTIE -->
         <section id="contact" class="py-16 px-6 max-w-6xl mx-auto border-t border-zinc-900 mb-12">
-            <div class="bg-zinc-900/40 border border-zinc-800/80 rounded-2xl p-8 sm:p-12">
-                <div class="max-w-xl">
-                    <h2 class="text-2xl font-bold tracking-tight mb-2">Laten we samenwerken</h2>
-                    <p class="text-zinc-400 text-sm mb-6">Heb je een vraag, een project in gedachten of wil je sparren over IT-infrastructuur? Stuur gerust een bericht.</p>
+            <div class="bg-gradient-to-b from-zinc-900/80 to-zinc-900/40 border border-zinc-800 rounded-3xl p-8 sm:p-12 relative overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
                     
-                    <form onsubmit="event.preventDefault(); alert('Bedankt voor je bericht!');" class="space-y-4">
+                    <!-- INFO & DIRECT CONTACT LINKS -->
+                    <div class="lg:col-span-5 flex flex-col justify-between">
                         <div>
-                            <label class="block text-xs font-medium text-zinc-400 mb-1">Naam</label>
-                            <input type="text" required class="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-4 py-2.5 text-sm text-zinc-100 focus:outline-none focus:border-indigo-500 transition-colors">
+                            <span class="text-xs font-semibold text-indigo-400 uppercase tracking-widest">Contact & Offerte</span>
+                            <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight mt-1 text-zinc-100">Zullen we sparren over jouw nieuwe website?</h2>
+                            <p class="text-zinc-400 text-sm mt-3 leading-relaxed">
+                                Heb je nog geen website, is je huidige site verouderd of zoek je betrouwbare webhosting met een vast aanspreekpunt? Neem gerust vrijblijvend contact op.
+                            </p>
                         </div>
-                        <div>
-                            <label class="block text-xs font-medium text-zinc-400 mb-1">E-mailadres</label>
-                            <input type="email" required class="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-4 py-2.5 text-sm text-zinc-100 focus:outline-none focus:border-indigo-500 transition-colors">
+
+                        <div class="space-y-4 my-8">
+                            <a href="mailto:info@lucasdepoortere.be" class="flex items-center gap-3 p-3.5 rounded-xl bg-zinc-950/70 border border-zinc-800/80 hover:border-indigo-500/50 transition-colors group">
+                                <div class="w-10 h-10 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center font-bold text-sm">
+                                     ✉
+                                </div>
+                                <div>
+                                    <span class="block text-xs text-zinc-500">Stuur een e-mail</span>
+                                    <span class="text-sm font-semibold text-zinc-200 group-hover:text-indigo-400 transition-colors">lucasdepoortere14@gmail.com</span>
+                                </div>
+                            </a>
+
+                            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-zinc-950/70 border border-zinc-800/80">
+                                <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold text-sm">
+                                    📍
+                                </div>
+                                <div>
+                                    <span class="block text-xs text-zinc-500">Regio & Werkgebied</span>
+                                    <span class="text-sm font-semibold text-zinc-200">West-Vlaanderen (op afstand in heel Vlaanderen)</span>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <label class="block text-xs font-medium text-zinc-400 mb-1">Bericht</label>
-                            <textarea rows="4" required class="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-4 py-2.5 text-sm text-zinc-100 focus:outline-none focus:border-indigo-500 transition-colors"></textarea>
+
+                        <div class="p-4 rounded-xl bg-indigo-500/5 border border-indigo-500/15 text-xs text-zinc-400">
+                            <strong>Vrijblijvende preview:</strong> Vertel me jouw activiteit of stuur de link van je huidige website, en ik toon je hoe een razendsnelle one-pager er voor jou kan uitzien.
                         </div>
-                        <button type="submit" class="w-full py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-medium rounded-lg transition-colors text-sm">
-                            Verstuur bericht
-                        </button>
-                    </form>
+                    </div>
+
+                    <!-- FORMULIER -->
+                    <div class="lg:col-span-7 bg-zinc-950/80 border border-zinc-800/90 rounded-2xl p-6 sm:p-8">
+                        <form onsubmit="event.preventDefault(); alert('Bedankt voor je aanvraag! Ik neem binnen 24 uur contact met je op.');" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-zinc-300 mb-1.5">Jouw naam <span class="text-indigo-400">*</span></label>
+                                    <input type="text" required placeholder="bv. Thomas Dupont" class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-zinc-100 placeholder:text-zinc-600 focus:outline-none focus:border-indigo-500 transition-colors">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-zinc-300 mb-1.5">E-mailadres <span class="text-indigo-400">*</span></label>
+                                    <input type="email" required placeholder="naam@bedrijf.be" class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-zinc-100 placeholder:text-zinc-600 focus:outline-none focus:border-indigo-500 transition-colors">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-zinc-300 mb-1.5">Bedrijfsnaam of activiteit</label>
+                                    <input type="text" placeholder="bv. Dakwerken Dupont" class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-zinc-100 placeholder:text-zinc-600 focus:outline-none focus:border-indigo-500 transition-colors">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-zinc-300 mb-1.5">Huidige website (indien van toepassing)</label>
+                                    <input type="text" placeholder="bv. www.mijnbedrijf.be" class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-zinc-100 placeholder:text-zinc-600 focus:outline-none focus:border-indigo-500 transition-colors">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-zinc-300 mb-1.5">Waarmee kan ik je helpen? <span class="text-indigo-400">*</span></label>
+                                <textarea rows="4" required placeholder="Vertel kort over je plannen of wensen (nieuwe website, hosting, aanpassingen...)" class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-zinc-100 placeholder:text-zinc-600 focus:outline-none focus:border-indigo-500 transition-colors"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-3.5 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-xl transition-all shadow-lg shadow-indigo-600/20 text-sm">
+                                Verstuur vrijblijvende aanvraag
+                            </button>
+                            
+                            <p class="text-center text-[11px] text-zinc-500 mt-2">
+                                Binnen 24 uur persoonlijk antwoord • Geen spam of opdringerige verkoop
+                            </p>
+                        </form>
+                    </div>
+
                 </div>
             </div>
         </section>
     </main>
 
     <!-- FOOTER -->
-    <footer class="border-t border-zinc-900 py-8 px-6 text-center text-sm text-zinc-500">
-        <p>&copy; 2026 Lucas Depoortere</p>
+    <footer class="border-t border-zinc-900 py-10 px-6 text-zinc-500 text-xs">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <img src="images/logo.svg" alt="Lucas Depoortere Logo" class="w-6 h-6 opacity-80">
+                <p>&copy; 2026 Lucas Depoortere • Student-Zelfstandige Webdesign &amp; Webhosting</p>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="#over-mij" class="hover:text-zinc-300 transition-colors">Over mij</a>
+                <a href="#diensten" class="hover:text-zinc-300 transition-colors">Diensten</a>
+                <a href="#projecten" class="hover:text-zinc-300 transition-colors">Realisaties</a>
+                <a href="#contact" class="hover:text-zinc-300 transition-colors">Contact</a>
+            </div>
+        </div>
     </footer>
 
 </body>
