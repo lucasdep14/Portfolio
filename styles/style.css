@@ -1,11 +1,8 @@
-/* Custom accent styling & smooth interactions for Lucas Depoortere Portfolio */
-
 ::selection {
     background-color: #6366f1;
     color: #ffffff;
 }
 
-/* Custom modern scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -23,7 +20,6 @@
     background: #3f3f46;
 }
 
-/* Subtle glow effects */
 .glow-card {
     position: relative;
 }
