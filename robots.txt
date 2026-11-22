@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Interne ontwikkelbestanden en klantvoorbeelden uitsluiten van Google indexering
+Disallow: /preview/
+
+# Verwijzing naar de live XML sitemap
+Sitemap: https://lucasdepoortere.be/sitemap.xml
