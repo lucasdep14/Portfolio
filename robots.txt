@@ -3,6 +3,7 @@ Allow: /
 
 # Interne ontwikkelbestanden en klantvoorbeelden uitsluiten van Google indexering
 Disallow: /preview/
+Disallow: /Preview/
 
 # Verwijzing naar de live XML sitemap
 Sitemap: https://lucasdepoortere.be/sitemap.xml
